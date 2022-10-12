@@ -1,4 +1,12 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+
+import { FormControl } from '@angular/forms';
+import * as path from 'path';
+import * as fs from "fs";
+
+
+//const fs = require('file-system')
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +15,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ACKgENERATOR';
+  name = new FormControl('');
+
 }
+
+
+
+
+
+
