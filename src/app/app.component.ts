@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 
 import { FormControl } from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
 import * as path from 'path';
 import * as fs from "fs";
 
@@ -16,7 +17,10 @@ import * as fs from "fs";
 export class AppComponent {
   title = 'ACKgENERATOR';
   name = new FormControl('');
-
+  jobs = [
+    { name: 'test', children: [{ name: 'rr' }] },
+    { name: 'test1', children: [{ name: 'rr1' }] },
+  ];
 }
 
 

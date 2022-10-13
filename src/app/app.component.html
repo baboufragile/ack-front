@@ -1,9 +1,33 @@
-
-<!--<div>{{value}}</div>-->
-
 <form>
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" value="Mike"><br><br>
-  <button (click)='generateFile()'>qdzqsd</button>
-</form>
+  <label for="vmAddress">Vm name:</label><br>
+  <input type="text" id="vmAddress" name="vmAddress"><br>
+  <label for="InvoiceId">InvoiceId:</label><br>
+  <input type="text" id="InvoiceId" name="InvoiceId">
+  <label for="returnCode">Return Code:</label><br>
+  <input type="text" id="returnCode" name="returnCode">
+  <label for="messageReturn">messageReturn:</label><br>
+  <input type="text" id="messageReturn" name="messageReturn">
+  <label for="portTokenProvider">portTokenProvider:</label><br>
+  <input type="text" id="portTokenProvider" name="portTokenProvider">
 
+  <input type="checkbox" id="isDelivery" name="isDelivery" value="Bike">
+  <label for="isDelivery"> isDelivery ?</label><br>
+  <ul *ngFor="let job of jobs; let i = index">
+    <input type="checkbox" id="{{ i }}" value="{{ job.name }}" (change)="true" #checkBox/><label
+    for="{{ i }}"
+  >{{ job.name }}</label
+  >
+    <ul *ngIf="checkBox.checked">
+      <li *ngFor="let child of job.children">
+        <label><input type="checkbox" /> {{ child.name }}</label>
+      </li>
+      <li *ngFor="let child of job.children">
+        <label><input type="checkbox" /> {{ child.name }}</label>
+      </li>
+    </ul>
+  </ul>
+  <label for="password">password:</label><br>
+  <input type="text" id="password" name="password">
+  <label for="remotePath">remotePath:</label><br>
+  <input type="text" id="remotePath" name="remotePath">
+</form>
